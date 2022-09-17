@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ========== Favicon ========== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5BBAD5">
+    <meta name="msapplication-TileColor" content="#DA532C">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- ========== Stylesheets ========== -->
+    <link rel="stylesheet" type="text/css" href="./static/stylesheets/style.css">
+
+    <!-- ========== Title ========== -->
+    <title>Tostification</title>
+</head>
+<body>
+    <h1 class="heading">Prepare Your Toast</h1>
+    <form class="toastGenerateForm" id="toastGenerateForm">
+        <div class="formControllGroup">
+            <label for="toast_type" class="label">Toast Type</label>
+            <select name="toast_type" id="toast_type" class="input">
+                <option value="info" selected>Information</option>
+                <option value="warning">Warning</option>
+                <option value="error">Error</option>
+                <option value="Success">Success</option>
+            </select>
+        </div>
+        <div class="formControllGroup">
+            <label for="toast_title" class="label">Toast Title</label>
+            <input type="text" name="toast_title" id="toast_title" value="Toast Title" placeholder="Give Some Title" required="required" class="input">
+        </div>
+        <div class="formControllGroup">
+            <label for="toast_description" class="label">Toast Description</label>
+            <input type="text" name="toast_description" id="toast_description" value="Lorem ipsum dolor sit amet consectetur, adipisicing elit." placeholder="Give Some Description..." required="required" class="input">
+        </div>
+        <button type="submit" class="btn formSubmitBtn" id="formSubmitBtn">Generate Toast</button>
+        <p class="ortext">OR</p>
+        <button type="button" class="btn sampleToastBtn" id="sampleToastBtn">Generate a Sample Toast</button>
+    </form>
+    <div class="shape shapeOne">
+        <img src="./assets/ShapeOne.png" alt="Shape One">
+    </div>
+    <div class="shape shapeTwo">
+        <img src="./assets/ShapeTwo.png" alt="Shape Two">
+    </div>
+
+    <!-- ========== Scripts ========== -->
+    <script src="./static/scripts/script.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/9cc0baf84d.js" crossorigin="anonymous"></script>
+</body>
+</html>

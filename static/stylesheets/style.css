@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Assistant", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: #F5F5F5;
+    gap: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.heading {
+    width: max-content;
+    margin-inline: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #1975C6;
+    font-size: 2.5rem;
+    padding-inline: 0.2em;
+    font-weight: 600;
+    border-bottom: 2px solid #1975C6;
+    z-index: 10;
+}
+
+.toastGenerateForm {
+    background-color: #FFFFFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: 720px;
+    padding: 2rem 3rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.formControllGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.label {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: hsl(208, 78%, 44%, 0.85);
+}
+
+.input {
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 2.5px;
+    outline: 1px solid hsl(208, 78%, 44%, 0.2);
+    color: #454545;
+    font-weight: 500;
+    -moz-transition: outline 200ms linear;
+    -webkit-transition: outline 200ms linear;
+    transition: outline 200ms linear;
+}
+
+input:hover {
+    outline: 1px solid hsl(208, 78%, 44%, 0.6);
+    -moz-transition: outline 200ms linear;
+    -webkit-transition: outline 200ms linear;
+    transition: outline 200ms linear;
+}
+
+input:focus {
+    outline: 1px solid hsl(208, 78%, 44%);
+    border: none;
+    -moz-transition: outline 200ms linear;
+    -webkit-transition: outline 200ms linear;
+    transition: outline 200ms linear;
+}
+
+.btn {
+    position: relative;
+    display: grid;
+    place-content: center;
+    background-color: hsl(208, 78%, 44%, 0.8);
+    width: max-content;
+    margin-inline: auto;
+    padding: 0.35em 1em;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn::after {
+    position: absolute;
+    content: "";
+    display: block;
+    inset: 0;
+    width: 0;
+    margin-inline: auto;
+    background-color: #1975C6;
+    z-index: -1;
+    -moz-transition: width 250ms linear;
+    -webkit-transition: width 250ms linear;
+    transition: width 250ms linear;
+}
+
+.btn:hover::after {
+    width: 100%;
+    -moz-transition: width 500ms cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    -webkit-transition: width 500ms cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition: width 500ms cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.formSubmitBtn {
+    margin-top: 1.5rem;
+}
+
+.ortext {
+    width: max-content;
+    margin-inline: auto;
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-block: -0.5rem;
+    color: #1975C6;
+    text-transform: uppercase;
+}
+
+.ortext::before,
+.ortext::after {
+    content: "";
+    display: block;
+    background-color: #1975C6;
+    width: 110px;
+    height: 2px;
+}
+
+.shape {
+    position: absolute;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.shape img {
+    aspect-ratio: 1;
+    width: 350px;
+}
+
+.shapeOne {
+    left: -5px;
+    top: -5px;
+}
+
+.shapeTwo {
+    right: 0;
+    bottom: -5px;
+}
+
+@media screen and (max-width: 768px) {
+    .heading { font-size: 2rem; }
+    .toastGenerateForm {
+        width: 500px;
+        padding: 2rem;
+    }
+
+    .label { font-size: 1.1rem; }
+    .btn { font-size: 1.1rem; }
+    .ortext::before, .ortext::after { width: 100px; }
+    .shape img { width: 300px; }
+}
+
+@media screen and (max-width: 540px) {
+    .heading { font-size: 1.5rem; }
+    .toastGenerateForm { width: 90vw; }
+    .label { font-size: 1rem; }
+    .input { font-size: 0.9rem; }
+    .btn { font-size: 1rem; }
+    .ortext::before, .ortext::after { width: 90px; }
+    .shape img { width: 250px; }
+}
+
+@media screen and (max-width: 450px) {
+    .heading { font-size: 1.35rem; }
+    .toastGenerateForm {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .toastGenerateForm { width: 900px; }
+}
+
+@media screen and (min-width: 1500px) {
+    html,
+    html:focus-within {
+        font-size: 120%;
+    }
+    .toastGenerateForm { width: 1280px; }
+    .shape img { width: 400px; }
+}
+
+@media screen and (min-width: 1920px) {
+    html,
+    html:focus-within {
+        font-size: 135%;
+    }
+    .toastGenerateForm { width: 1440px; }
+    .shape img { width: 450px; }
+}
+
+@media screen and (min-width: 2500px) {
+    html,
+    html:focus-within {
+        font-size: 180%;
+    }
+    .toastGenerateForm { width: 1720px; }
+    .shape img { width: 500px; }
+}
