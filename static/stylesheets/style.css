@@ -18,7 +18,7 @@ body {
     display: grid;
     place-content: center;
     background-color: #F5F5F5;
-    gap: 3rem;
+    gap: 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -32,7 +32,7 @@ body {
     padding-inline: 0.2em;
     font-weight: 600;
     border-bottom: 2px solid #1975C6;
-    z-index: 10;
+    z-index: 20;
 }
 
 .toastGenerateForm {
@@ -43,14 +43,14 @@ body {
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     z-index: 10;
 }
 
 .formControllGroup {
     display: flex;
     flex-direction: column;
-    gap: 0.35rem;
+    gap: 0.25rem;
 }
 
 .label {
@@ -129,7 +129,7 @@ input:focus {
 }
 
 .formSubmitBtn {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .ortext {
@@ -159,6 +159,7 @@ input:focus {
     -moz-transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+    filter: opacity(0.7) contrast(1.3);
 }
 
 .shape img {

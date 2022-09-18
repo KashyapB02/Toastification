@@ -24,6 +24,17 @@
     <h1 class="heading">Prepare Your Toast</h1>
     <form class="toastGenerateForm" id="toastGenerateForm">
         <div class="formControllGroup">
+            <label for="toast_position" class="label">Toast Position</label>
+            <select name="toast_position" id="toast_position" class="input">
+                <option value="topRight" selected>Top Right</option>
+                <option value="topCenter">Top Center</option>
+                <option value="topLeft">Top Left</option>
+                <option value="bottomRight">Bottom Right</option>
+                <option value="bottomCenter">Bottom Center</option>
+                <option value="bottomLeft">Bottom Left</option>
+            </select>
+        </div>
+        <div class="formControllGroup">
             <label for="toast_type" class="label">Toast Type</label>
             <select name="toast_type" id="toast_type" class="input">
                 <option value="info" selected>Information</option>
